@@ -10,8 +10,8 @@
     <body>
         <h1>Hello World!!!</h1>
 	 <h1>Welcome to Maven Web Application Deployment!!</h1>
-	    <h2>Welcome to deployment </h2>
-	    <h3>welcome to jenkins</h3>
-	    <h4>continuous deployment achived</h4>
+	    <h1>Welcome to continous integration acheived</h1>
+	    <h2>Welcome to continous deploymnet acheived</h2>
+	    
     </body>
 </html>
