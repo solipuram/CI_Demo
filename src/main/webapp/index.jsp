@@ -11,6 +11,8 @@
         <h1>Hello World!!!</h1>
 	 <h1>Welcome to Maven Web Application Deployment!!</h1>
 	    <h2>Welcome to continous deploymnet acheived</h2>
+	    <h2>Welcome to continous integration acheived</h2>
+	    
 	    
     </body>
 </html>
