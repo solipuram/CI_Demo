@@ -8,10 +8,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!!!</h1>
-	 <h1>Welcome to Maven Web Application Deployment!!</h1>
-	    <h2>Welcome to continous deploymnet acheived</h2>
+        <h1>Welcome to App-Server!!!</h1>
+	    <h2>Welcome to Continuous Integration</h2>
 	    
-	    <h3>when pushing is trigger</h3>
     </body>
 </html>
