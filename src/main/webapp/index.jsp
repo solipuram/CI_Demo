@@ -8,7 +8,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Welcome to App-Server!!!</h1>
+        <h1>Welcome to Devops!!!</h1>
 	    <h2>Welcome to Jenkins!!!</h2>
 	    
     </body>
