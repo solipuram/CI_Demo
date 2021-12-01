@@ -18,6 +18,13 @@ pipeline {
             }
         }
         
+        stage('Publish to Nexus')
+        {
+             steps
+            {
+                sh 'mvn clean deploy'
+            }
+        }
         
              
         
