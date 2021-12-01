@@ -8,12 +8,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Welcome to Devops!!!</h1>
-	    <h2>Welcome to Jenkins!!!</h2>
-	    <h3>Welcome to Slack!!!</h3>
-	    <h4>Welcome to ApacheTomcat !!!</h4>
-	     <h4>Welcome to Email Notification !!!</h4>
-	   
+	<h1>Welcome to Netstar!!!</h1>
+	<h2>Welcome to Nexus!!!</h2>
+	
+
 	    
     </body>
 </html>
