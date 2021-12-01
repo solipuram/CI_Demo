@@ -4,7 +4,7 @@
 
   <groupId>cidemo</groupId>
   <artifactId>testapp</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
   <packaging>war</packaging>
 
   
