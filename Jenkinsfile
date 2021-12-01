@@ -7,7 +7,7 @@ pipeline {
         {
             steps 
             {
-                  git url: 'https://github.com/solipuram/webapp.git', credentials: 'cidemo',branch 'master'
+                  git url: 'https://github.com/solipuram/webapp.git', credentials: 'cidemo',branch: 'master'
             }
         }
         stage('Compile') 
