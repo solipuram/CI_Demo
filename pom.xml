@@ -39,16 +39,4 @@
     </plugins>
   </build>
   
-  <distributionManagement>
-   <smapshotRepository>
-      <id>nexus</id>
-     <name>maven-snapshots</name>
-      <url></url>
-   </smapshotRepository>
-    <repository>
-      <id>nexus</id>
-     <name>maven-release</name>
-      <url></url>
-   </repository>
-</distributionManagement>
-</project>
+  </project>
