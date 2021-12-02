@@ -25,7 +25,13 @@ pipeline {
                 sh 'mvn clean deploy -P release'
             }
         }
-        
+         stage('Deploy on tomcat')
+        {
+             steps
+            {
+                sh 'mvn tomcat7:deploy'
+            }
+        }
              
         
         
