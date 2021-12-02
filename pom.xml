@@ -37,6 +37,16 @@
         </configuration>
       </plugin>
     </plugins>
+    <plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat7-maven-plugin</artifactId>
+    <version>1.0</version>
+    <configuration>
+        <url>http://192.168.1.16:8080/manager/</url>
+        <server>tomcat</server>
+        <path>/myapp</path>
+    </configuration>
+</plugin>
   </build>
   
   <distributionManagement>
