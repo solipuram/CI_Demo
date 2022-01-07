@@ -22,7 +22,7 @@ pipeline {
         {
              steps
             {
-                sh 'mvn clean deploy -P release'
+                sh 'mvn clean deploy'
             }
         }
          stage('Deploy on tomcat')
