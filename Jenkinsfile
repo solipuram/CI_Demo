@@ -29,7 +29,7 @@ pipeline {
                     nexusUrl: 'https://192.168.1.16:8081/repository/reddy-dev/',
                     groupId: 'reddy-dev',
                     version: '1.0.0',
-                    repository: 'ci-demo',
+                    repository: 'reddy-dev',
                     credentialsId: 'nexus',
                     artifacts: [
                         [artifactId: 'ci-demo',
