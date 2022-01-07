@@ -29,7 +29,8 @@ pipeline {
         {
              steps
             {
-                sh 'mvn tomcat7:deploy'
+                //sh 'mvn tomcat7:deploy'
+                echo "Deploying on tomcat"
             }
         }
              
