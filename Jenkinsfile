@@ -30,7 +30,7 @@ pipeline {
                     groupId: 'reddy-dev',
                     version: '1.0.0',
                     repository: 'ci-demo',
-                    credentialsId: 'CredentialsId',
+                    credentialsId: 'nexus',
                     artifacts: [
                         [artifactId: 'ci-demo',
                         classifier: '',
