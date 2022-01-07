@@ -100,9 +100,7 @@ Go to Jenkins -> Select respective team master and folder -> Select Config files
 • Credentials - select the credential <Team-name>-Nexus-CI-User.
 • Add below file content.
 
-![image](https://user-images.githubusercontent.com/3168102/148500846-90feda76-0847-4430-8229-76be05eb649a.png)
-
-![Nexus_Settings](https://user-images.githubusercontent.com/3168102/148500933-e73ea9c0-8e95-4809-b724-62da58646968.PNG)
+![Nexus_Settings](https://user-images.githubusercontent.com/3168102/148501304-7714dc1f-cb9e-44ba-8096-d685313271f1.PNG)
 
 ```
 
@@ -121,6 +119,7 @@ setting.xml
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
       <url>https://<nexus-ip>/repository/<team-group-repo>/</url>
+      <url>https://192.168.1.16:8081/reposiroty/reddy-maven-group</url>
     </mirror>
   </mirrors>
   <servers>
@@ -129,12 +128,13 @@ setting.xml
     <profile>
       <id>nexus</id>
       <properties>
-        <release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
-	 <release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
+        <service.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</service.repo.url>
+	<release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
+	<snapshot.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</snapshot.repo.url>
 	
-	<url>http://192.168.1.16:8081/repository/maven-releases</url>
-     
-        <snapshot.repo.url>https://<nexus-ip>/repository/<team-snaphsot-repo>/</snapshot.repo.url>
+        <service.repo.url>https://192.168.1.16:808a/repository/reddy-services/</service.repo.url>
+	<release.repo.url>https://192.168.1.16:8081/repository/<reddy-maven-release></release.repo.url>
+	<snapshot.repo.url>https://192.168.1.16:8081/repository/<reddy-maven-snapshots>/</snapshot.repo.url>
       </properties>
       <!--Enable snapshots for the built in central repo to direct -->
       <repositories>
@@ -169,11 +169,6 @@ setting.xml
 
 ```
 
-```
-• Update <team-group-repo> with the teams group repository, name of the repository will be <team-name>-maven for downloading proxy artifacts from central repository or from team specific repositories.
-• Update <team-snapshot-repo> with the teams snapshot repository, name of the repository will be <team-name>-maven-snapshot
-• Update <team-release-repo> with the teams release repository, name of the repository will be <team-name>-maven-release
-```
 
 ### Publish to Nexus
 
