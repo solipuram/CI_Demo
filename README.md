@@ -31,6 +31,9 @@ Goal Name as mvn build install.
 
 ## Publish to Nexus.
 
+## Goal Name
+mvn clean deploy 
+
 Add the distribution managemnet in the pom.xml file
 
 Example:
@@ -49,7 +52,7 @@ Example:
   </distributionManagement>
 ```
 
-##Add the Nexus Credinatls in setting.xml
+##Add the Nexus Credinatls in setting.xml on the 
 file in local machine at  /usr/share/maven/conf/settings.xml and add a server block to it.
 ```
  <servers>
@@ -61,8 +64,6 @@ file in local machine at  /usr/share/maven/conf/settings.xml and add a server bl
  </servers>
 ```
 
-## Goal Name
-mvn clean deploy -P release
 
 
 ## The below steps for when Jenkins is running Master & Slave
@@ -90,14 +91,19 @@ Example:
 Go to Jenkins -> Select respective team master and folder -> Select Config files option at folder level ->Add a new config file -> Select Maven settings file  
 
 ```
-• ID - <Team-Name>NexusGlobalSettings
+• ID -
 • Name - NexusSettings
-• Comment - <Team-Name> Nexus maven settings.xml file
+• Comment - Nexus_maven_settings.xml file
 • Replace All - uncheck
 • Add Server Credentials
 • Server Id - nexus
 • Credentials - select the credential <Team-name>-Nexus-CI-User.
 • Add below file content.
+
+![image](https://user-images.githubusercontent.com/3168102/148500846-90feda76-0847-4430-8229-76be05eb649a.png)
+
+![Nexus_Settings](https://user-images.githubusercontent.com/3168102/148500933-e73ea9c0-8e95-4809-b724-62da58646968.PNG)
+
 ```
 
 setting.xml
@@ -124,6 +130,10 @@ setting.xml
       <id>nexus</id>
       <properties>
         <release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
+	 <release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
+	
+	<url>http://192.168.1.16:8081/repository/maven-releases</url>
+     
         <snapshot.repo.url>https://<nexus-ip>/repository/<team-snaphsot-repo>/</snapshot.repo.url>
       </properties>
       <!--Enable snapshots for the built in central repo to direct -->
