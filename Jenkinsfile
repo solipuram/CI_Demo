@@ -22,20 +22,20 @@ pipeline {
         {
              steps
             {
-                //sh 'mvn clean deploy'
-                nexusArtifactUploader(
-                    nexusVersion: 'nexus3',
-                    protocol: 'http',
-                    nexusUrl: 'https://192.168.1.16:8081/repository/reddy-dev/',
-                    groupId: 'reddy-dev',
-                    version: '1.0.0',
-                    repository: 'reddy-dev',
-                    credentialsId: 'nexus',
-                    artifacts: [
-                        [artifactId: 'ci-demo',
-                        classifier: '',
-                        file: 'target/ci-demo' + version + '.jar',
-                        type: 'jar']])
+                sh 'mvn clean deploy'
+                // nexusArtifactUploader(
+                //     nexusVersion: 'nexus3',
+                //     protocol: 'http',
+                //     nexusUrl: 'https://192.168.1.16:8081/repository/reddy-dev/',
+                //     groupId: 'reddy-dev',
+                //     version: '1.0.0',
+                //     repository: 'reddy-dev',
+                //     credentialsId: 'nexus',
+                //     artifacts: [
+                //         [artifactId: 'ci-demo',
+                //         classifier: '',
+                //         file: 'target/ci-demo' + version + '.jar',
+                //         type: 'jar']])
  
             }
         }
