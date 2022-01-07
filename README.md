@@ -87,7 +87,8 @@ Example:
 ```
 
 
-####### Config file in Jenkins 
+###### Config file in Jenkins.
+
 Go to Jenkins -> Select respective team master and folder -> Select Config files option at folder level ->Add a new config file -> Select Maven settings file  
 
 ```
