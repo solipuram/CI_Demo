@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>reddy.dev.ads</groupId>
-  <artifactId>ci-workflow</artifactId>
-  <version>1-SNAPSHOT</version>
+  <artifactId>ci-demo</artifactId>
+  <version>1.0.0</version>
   
   
   <url>http://maven.apache.org</url>
