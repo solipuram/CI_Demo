@@ -31,6 +31,9 @@ Goal Name as mvn build install.
 
 ## Publish to Nexus.
 
+## Goal Name
+mvn clean deploy 
+
 Add the distribution managemnet in the pom.xml file
 
 Example:
@@ -49,7 +52,7 @@ Example:
   </distributionManagement>
 ```
 
-##Add the Nexus Credinatls in setting.xml
+##Add the Nexus Credinatls in setting.xml on the 
 file in local machine at  /usr/share/maven/conf/settings.xml and add a server block to it.
 ```
  <servers>
@@ -61,8 +64,6 @@ file in local machine at  /usr/share/maven/conf/settings.xml and add a server bl
  </servers>
 ```
 
-## Goal Name
-mvn clean deploy -P release
 
 
 ## The below steps for when Jenkins is running Master & Slave
@@ -86,18 +87,22 @@ Example:
 ```
 
 
-####### Config file in Jenkins 
+###### Config file in Jenkins.
+
 Go to Jenkins -> Select respective team master and folder -> Select Config files option at folder level ->Add a new config file -> Select Maven settings file  
 
 ```
-• ID - <Team-Name>NexusGlobalSettings
+• ID -
 • Name - NexusSettings
-• Comment - <Team-Name> Nexus maven settings.xml file
+• Comment - Nexus_maven_settings.xml file
 • Replace All - uncheck
 • Add Server Credentials
 • Server Id - nexus
 • Credentials - select the credential <Team-name>-Nexus-CI-User.
 • Add below file content.
+
+![Nexus_Settings](https://user-images.githubusercontent.com/3168102/148501304-7714dc1f-cb9e-44ba-8096-d685313271f1.PNG)
+
 ```
 
 setting.xml
@@ -115,6 +120,7 @@ setting.xml
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
       <url>https://<nexus-ip>/repository/<team-group-repo>/</url>
+      <url>https://192.168.1.16:8081/reposiroty/reddy-maven-group</url>
     </mirror>
   </mirrors>
   <servers>
@@ -123,8 +129,13 @@ setting.xml
     <profile>
       <id>nexus</id>
       <properties>
-        <release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
-        <snapshot.repo.url>https://<nexus-ip>/repository/<team-snaphsot-repo>/</snapshot.repo.url>
+        <service.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</service.repo.url>
+	<release.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</release.repo.url>
+	<snapshot.repo.url>https://<nexus-ip>/repository/<team-release-repo>/</snapshot.repo.url>
+	
+        <service.repo.url>https://192.168.1.16:808a/repository/reddy-services/</service.repo.url>
+	<release.repo.url>https://192.168.1.16:8081/repository/<reddy-maven-release></release.repo.url>
+	<snapshot.repo.url>https://192.168.1.16:8081/repository/<reddy-maven-snapshots>/</snapshot.repo.url>
       </properties>
       <!--Enable snapshots for the built in central repo to direct -->
       <repositories>
@@ -159,11 +170,6 @@ setting.xml
 
 ```
 
-```
-• Update <team-group-repo> with the teams group repository, name of the repository will be <team-name>-maven for downloading proxy artifacts from central repository or from team specific repositories.
-• Update <team-snapshot-repo> with the teams snapshot repository, name of the repository will be <team-name>-maven-snapshot
-• Update <team-release-repo> with the teams release repository, name of the repository will be <team-name>-maven-release
-```
 
 ### Publish to Nexus
 
